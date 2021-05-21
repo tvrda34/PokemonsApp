@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    //pokedex colors
+    <color name="tint_primary">#edb000</color>
+    <color name="tint_secondary">#287be3</color>
+    <color name="dark">#1c1f22</color>
+    <color name="dark_alpha">#331c1f22</color>
+    <color name="error">#ff4848</color>
+    <color name="surface_2">#f3f6f9</color>
+    <color name="success">#12ca5d</color>
+    <color name="neutrals_alpha_n_lv_3">#73222226</color>
+    <color name="on_tint_on_tint_primary">#fdffffff</color>
+    <color name="flat_pokemon_type_grass">#2db407</color>
+    <color name="flat_pokemon_type_poison">#d933d3</color>
+    <color name="flat_pokemon_type_water">#41b1ff</color>
+    <color name="flat_pokemon_type_fire">#ff6f21</color>
+    <color name="flat_pokemon_type_normal">#afad9e</color>
+    <color name="flat_pokemon_type_fighting">#c03128</color>
+    <color name="flat_pokemon_type_flying">#a890f0</color>
+    <color name="flat_pokemon_type_rock">#ab8b5f</color>
+    <color name="flat_pokemon_type_ground">#ceb87d</color>
+    <color name="flat_pokemon_type_bug">#a7b820</color>
+    <color name="flat_pokemon_type_ghost">#705998</color>
+    <color name="flat_pokemon_type_steel">#a4a4b5</color>
+    <color name="flat_pokemon_type_electric">#e7bc1b</color>
+    <color name="flat_pokemon_type_psychic">#f85888</color>
+    <color name="flat_pokemon_type_ice">#5bc6c6</color>
+    <color name="flat_pokemon_type_dragon">#7038f8</color>
+    <color name="flat_pokemon_type_dark">#6f5848</color>
+    <color name="flat_pokemon_type_fairy">#ee99ac</color>
+    <color name="surface_1">#ffffff</color>
+    <color name="cold_gray">#798fa4</color>
+    <color name="surface_0">#eaf4fc</color>
+    <color name="flat_pokemon_type_undefined">#67a190</color>
+    <color name="flat_base_stats_01_hp">#f92727</color>
+    <color name="flat_base_stats_03_defense">#e6b800</color>
+    <color name="flat_base_stats_02_attack">#f08030</color>
+    <color name="flat_base_stats_04_sp_atk">#6890f0</color>
+    <color name="flat_base_stats_05_sp_def">#61c52e</color>
+    <color name="flat_base_stats_06_speed">#f879dd</color>
+    <color name="flat_neutral_background">#801c1f22</color>
+
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Pokemons app</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="arrow_back_desc">arrow_back</string>
+    <string name="about_title">About</string>
+    <string name="academy_title">SofaScore Android Academy</string>
+    <string name="class_2021">Class 2021</string>
+    <string name="sofascore_logo_desc">SofaScore logo</string>
+    <string name="android_logo_desc">android logo</string>
+    <string name="pokemon_app">App name</string>
+    <string name="pokemon_app_title">Pokemon App</string>
+    <string name="api_credit">API Credit</string>
+    <string name="pokemons">pokemons</string>
+    <string name="dev_info">Developer</string>
+    <string name="tvrtko_ivasic">Tvrtko Ivasic</string>
+    <string name="settings_title">Settings</string>
+    <string name="short_about_text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis.</string>
+    <string name="more_info">More info</string>
+    <string name="clear_my_fav_list_title">clear my favourites list</string>
+    <string name="language">Language</string>
+    <string name="title_search">Search</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="title_settings">Settings</string>
+</resources>
