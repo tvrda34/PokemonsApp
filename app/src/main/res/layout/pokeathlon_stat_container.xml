@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/recycler_item_bckg">
+
+    <TextView
+        android:id="@+id/pokeathlon_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/pokeathlon_stats"
+        android:textAppearance="@style/Headline2DarkCenter"
+        android:textAlignment="center" />
+
+    <include
+        layout="@layout/pokeathlon_stats"
+        android:id="@+id/speed_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokeathlon_title"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp" />
+
+    <include
+        layout="@layout/pokeathlon_stats"
+        android:id="@+id/power_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/speed_stat"
+        app:layout_constraintTop_toBottomOf="@+id/pokeathlon_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp" />
+
+    <include
+        layout="@layout/pokeathlon_stats"
+        android:id="@+id/skill_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speed_stat"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <include
+        layout="@layout/pokeathlon_stats"
+        android:id="@+id/stamina_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/skill_stat"
+        app:layout_constraintTop_toBottomOf="@+id/power_stat"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <include
+        layout="@layout/pokeathlon_stats"
+        android:id="@+id/jump_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skill_stat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <include
+        layout="@layout/pokeathlon_stats"
+        android:id="@+id/total_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/jump_stat"
+        app:layout_constraintTop_toBottomOf="@+id/stamina_stat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

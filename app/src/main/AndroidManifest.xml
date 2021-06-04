@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pokemonsapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PokemonsApp">
-        <activity android:name=".ui.about.AboutActivity"></activity>
+        <activity
+            android:name=".ui.pokemon.PokemonItem"
+            android:label="@string/title_activity_pokemon_item"
+            android:theme="@style/Theme.PokemonsApp.NoActionBar" />
+        <activity android:name=".ui.about.AboutActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
