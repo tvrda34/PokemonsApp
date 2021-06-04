@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/recycler_item_bckg">
+
+    <TextView
+        android:id="@+id/alert_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/alert_title"
+        android:textAppearance="@style/Headline2DarkLeft"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/alert_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alert_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/alert_info"
+        android:textAppearance="@style/BodyDarkLeft"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="invisible" />
+
+    <android.widget.Button
+        android:id="@+id/bttn_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textColor="@color/tint_secondary"
+        android:text="@string/bttn_cancle"
+        app:layout_constraintTop_toBottomOf="@+id/alert_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bttn_clear"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp" />
+
+    <android.widget.Button
+        android:id="@+id/bttn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blue"
+        android:textColor="@color/white"
+        android:text="@string/bttn_clear"
+        app:layout_constraintTop_toBottomOf="@+id/alert_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
