@@ -1,5 +1,6 @@
 package com.example.pokemonsapp
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
@@ -7,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.pokemonsapp.databinding.ActivityMainBinding
+import com.example.pokemonsapp.helpers.LanguageHelper
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -35,5 +37,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LanguageHelper.wrapLanguage(newBase))
     }
 }
