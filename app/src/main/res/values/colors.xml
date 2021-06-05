@@ -47,5 +47,9 @@
     <color name="flat_base_stats_05_sp_def">#61c52e</color>
     <color name="flat_base_stats_06_speed">#f879dd</color>
     <color name="flat_neutral_background">#801c1f22</color>
-
+    <color name="status_bar_main">#D9edb000</color>
+    <color name="status_bar_details">#0c000000</color>
+    <color name="bckg_succes">#1212ca5d</color>
+    <color name="bckg_error">#12ff4848</color>
+    <color name="bckg_gray">#12798fa4</color>
 </resources>

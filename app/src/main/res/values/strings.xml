@@ -75,4 +75,19 @@
     <string name="loading_msg">Pokemons are loading</string>
     <string name="lv">"Lv "</string>
     <string name="edit_error_msg">You can\'t edit empty list!</string>
+    <string name="title_activity_type">activity_type</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dmg_text_title">2x</string>
+    <string name="pokemons_title">POKEMONS</string>
+    <string name="moves">MOVES</string>
+    <string name="dmg_overview">DAMAGE OVERVIEW</string>
+    <string name="offensive">Offensive</string>
+    <string name="power">POWER</string>
+    <string name="types_title">TYPES</string>
+    <string name="defensive">Defensive</string>
+    <string name="half_text">1/2x</string>
+    <string name="no_dmg_text">0x</string>
 </resources>

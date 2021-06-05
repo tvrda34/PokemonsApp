@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokemonsApp">
         <activity
+            android:name=".ui.type.TypeActivity"
+            android:label="@string/title_activity_type"
+            android:theme="@style/Theme.PokemonsApp.NoActionBar" />
+        <activity
             android:name=".ui.pokemon.PokemonItem"
             android:label="@string/title_activity_pokemon_item"
             android:theme="@style/Theme.PokemonsApp.NoActionBar" />

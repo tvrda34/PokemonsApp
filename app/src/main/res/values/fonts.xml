@@ -565,6 +565,7 @@
         <item name="android:lineSpacingExtra">6sp</item>
         <item name="android:textColor">@color/cold_gray</item>
     </style>
+
     <style name="DescriptionColdGrayCenter">
         <item name="android:gravity">center_horizontal</item>
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -573,5 +574,13 @@
         <item name="android:letterSpacing">0.1</item>
         <item name="android:lineSpacingExtra">6sp</item>
         <item name="android:textColor">@color/cold_gray</item>
+    </style>
+
+    <style name="TypeDmgNumbersFont">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">24sp</item>
     </style>
 </resources>
