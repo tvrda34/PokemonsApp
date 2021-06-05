@@ -1,8 +1,10 @@
 package com.example.pokemonsapp.ui.pokemon
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import com.example.pokemonsapp.helpers.*
 import com.example.pokemonsapp.model.PokemonAllData
 import com.example.pokemonsapp.ui.adapters.AbilitiesRecyclerAdapter
 import com.example.pokemonsapp.ui.adapters.EvolutionRecyclerAdapter
+import com.example.pokemonsapp.ui.type.TypeActivity
 import com.example.pokemonsapp.viewmodel.SharedViewModel
 import kotlin.math.roundToInt
 
@@ -30,6 +33,11 @@ class PokemonItem : AppCompatActivity() {
 
         binding = ActivityPokemonItemBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val window = this.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        //window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = getColor(R.color.status_bar_details)
 
         setSupportActionBar(findViewById(R.id.toolbar))
 
@@ -128,6 +136,16 @@ class PokemonItem : AppCompatActivity() {
         binding.scrollCont.baseInfo.label1.text =
             capitalization(pokemon.pokemonDetails.types[0].type.name)
 
+        //on click type activity
+        binding.scrollCont.baseInfo.label1.setOnClickListener {
+            this.startActivity(
+                Intent(this, TypeActivity::class.java).putExtra(
+                    "extra",
+                    pokemon.pokemonDetails.types[0].type
+                )
+            )
+        }
+
         val typeSize = pokemon.pokemonDetails.types.size
         if (typeSize == 2) {
             binding.scrollCont.baseInfo.label2.backgroundTintList = ColorStateList.valueOf(
@@ -138,6 +156,17 @@ class PokemonItem : AppCompatActivity() {
             )
             binding.scrollCont.baseInfo.label2.text =
                 capitalization(pokemon.pokemonDetails.types[1].type.name)
+
+            //label2 click
+            binding.scrollCont.baseInfo.label2.setOnClickListener {
+                this.startActivity(
+                    Intent(this, TypeActivity::class.java).putExtra(
+                        "extra",
+                        pokemon.pokemonDetails.types[1].type
+                    )
+                )
+            }
+
         } else {
             binding.scrollCont.baseInfo.label2.visibility = View.GONE
         }
@@ -197,4 +226,5 @@ class PokemonItem : AppCompatActivity() {
         val weight2digits = String.format("%.2f", weight).replace(",", ".")
         return weight2digits.plus(" lbs. (").plus(weightInt.toDouble() / 10).plus("kg)")
     }
+
 }
