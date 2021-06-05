@@ -1,9 +1,6 @@
 package com.example.pokemonsapp.netowrking.api
 
-import com.example.pokemonsapp.model.PokemonDetails
-import com.example.pokemonsapp.model.PokemonEvolution
-import com.example.pokemonsapp.model.PokemonSpecie
-import com.example.pokemonsapp.model.Pokemons
+import com.example.pokemonsapp.model.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -20,4 +17,7 @@ interface PokemonsService {
 
     @GET("pokemon-species/{id}")
     suspend fun getPokemonSpecie(@Path("id") id: Int): PokemonSpecie
+
+    @GET("type/{id}")
+    suspend fun getTypeDetails(@Path("id") id: Int): TypeDetails
 }

@@ -1,9 +1,6 @@
 package com.example.pokemonsapp.netowrking.repository
 
-import com.example.pokemonsapp.model.PokemonDetails
-import com.example.pokemonsapp.model.PokemonEvolution
-import com.example.pokemonsapp.model.PokemonSpecie
-import com.example.pokemonsapp.model.Pokemons
+import com.example.pokemonsapp.model.*
 import com.example.pokemonsapp.netowrking.api.Network
 
 class NetworkRepository {
@@ -21,5 +18,9 @@ class NetworkRepository {
 
     suspend fun getSpecie(id: Int): PokemonSpecie {
         return Network().getService().getPokemonSpecie(id)
+    }
+
+    suspend fun getTypeDetails(id: Int): TypeDetails {
+        return Network().getService().getTypeDetails(id)
     }
 }
