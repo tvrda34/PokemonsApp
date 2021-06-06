@@ -2,7 +2,13 @@
 Pokedex app for Android. Still in process of creation.
 Final task on SofaScore android academy.
 
-Problems:
+##Opis
+Aplikacija je nastala kao završni rad na android akademiji tvrtke SofaScore.
+Aplikacija je jednostavna simulacija Pokedexa.
+Omogućava: pregled pokemona, dodavanje u favorite, pregled raznih informacija o pokemonima.
+
+### Dodatak za ispravljače
+Problemi:
 - problemi s dizajnom:
     - Spinner umjesto TextInputLayouta
     - PokemonActivity title nije dobro pozicioniran
@@ -13,4 +19,4 @@ Problems:
 - search -> neoptimiziran i loš
 - reorder radi, ali nije najbolje ponašanje baš uvijek
 
-To je valjda to sve drugo je kolko tolko pristojno napravljeno
+To je valjda to, sve drugo je koliko Tolko pristojno napravljeno.
