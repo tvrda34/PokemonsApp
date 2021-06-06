@@ -2,7 +2,7 @@
 Pokedex app for Android. Still in process of creation.
 Final task on SofaScore android academy.
 
-##Opis
+## Opis
 Aplikacija je nastala kao završni rad na android akademiji tvrtke SofaScore.
 Aplikacija je jednostavna simulacija Pokedexa.
 Omogućava: pregled pokemona, dodavanje u favorite, pregled raznih informacija o pokemonima.
