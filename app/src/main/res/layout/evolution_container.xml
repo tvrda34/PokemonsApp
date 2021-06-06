@@ -27,4 +27,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/evolution_title" />
 
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evolution_title"
+        android:text="@string/loading"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/BodyColdGrayCenter"
+        android:textAlignment="center" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

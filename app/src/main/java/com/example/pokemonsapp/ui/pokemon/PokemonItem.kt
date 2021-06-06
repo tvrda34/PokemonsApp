@@ -7,6 +7,7 @@ import android.view.View
 import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.ColorUtils
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.example.pokemonsapp.R
@@ -36,8 +37,8 @@ class PokemonItem : AppCompatActivity() {
 
         val window = this.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        //window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = getColor(R.color.status_bar_details)
+        val color = ColorUtils.setAlphaComponent(getColor(R.color.status_bar_details), 25)
+        window.statusBarColor = color
 
         setSupportActionBar(findViewById(R.id.toolbar))
 
@@ -205,9 +206,16 @@ class PokemonItem : AppCompatActivity() {
         binding.scrollCont.evolutionContainer.evolutionRecycler.setHasFixedSize(false)
 
         viewModel.evolution.observe(this, {
-            val evolutionAdapter =
-                EvolutionRecyclerAdapter(context = applicationContext, it, pokemon.pokemonBase.name)
-            binding.scrollCont.evolutionContainer.evolutionRecycler.adapter = evolutionAdapter
+            if (!it.isEmpty()) {
+                binding.scrollCont.evolutionContainer.loading.visibility = View.GONE
+                val evolutionAdapter =
+                    EvolutionRecyclerAdapter(
+                        context = applicationContext,
+                        it,
+                        pokemon.pokemonBase.name
+                    )
+                binding.scrollCont.evolutionContainer.evolutionRecycler.adapter = evolutionAdapter
+            }
         })
 
     }

@@ -1,7 +1,9 @@
 package com.example.pokemonsapp.ui.about
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.ColorUtils
 import com.example.pokemonsapp.R
 import com.example.pokemonsapp.databinding.ActivityAboutBinding
 
@@ -25,5 +27,10 @@ class AboutActivity : AppCompatActivity() {
         binding.backArrow.setOnClickListener {
             this.finish()
         }
+
+        val window = this.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        val color = ColorUtils.setAlphaComponent(getColor(R.color.surface_1), 216)
+        window.statusBarColor = color
     }
 }

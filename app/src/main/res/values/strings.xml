@@ -98,4 +98,5 @@
     <string name="category">CATEGORY</string>
     <string name="pp">PP</string>
     <string name="none">None</string>
+    <string name="loading">Loading…</string>
 </resources>

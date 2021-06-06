@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.ColorUtils
 import androidx.viewpager.widget.ViewPager
+import com.example.pokemonsapp.R
 import com.example.pokemonsapp.databinding.ActivityTypeBinding
 import com.example.pokemonsapp.helpers.capitalization
 import com.example.pokemonsapp.helpers.idExtractor
@@ -54,16 +55,15 @@ class TypeActivity : AppCompatActivity() {
 
         val window = this.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        //window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         val color = ColorUtils.setAlphaComponent(typeColorPicker(this, type = type.name), 216)
         window.statusBarColor = color
 
     }
 
     private fun setUpFragment(adapter: SectionsPagerAdapter) {
-        adapter.addFragment(OverviewFragment(), "DAMAGE OVERVIEW")
-        adapter.addFragment(MovesFragment(), "MOVES")
-        adapter.addFragment(AllPokemonsFragment(), "POKEMONS")
+        adapter.addFragment(OverviewFragment(), getString(R.string.dmg_overview))
+        adapter.addFragment(MovesFragment(), getString(R.string.moves))
+        adapter.addFragment(AllPokemonsFragment(), getString(R.string.pokemons_title))
     }
 
 
