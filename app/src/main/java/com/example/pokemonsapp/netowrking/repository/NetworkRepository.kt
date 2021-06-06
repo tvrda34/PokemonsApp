@@ -23,4 +23,8 @@ class NetworkRepository {
     suspend fun getTypeDetails(id: Int): TypeDetails {
         return Network().getService().getTypeDetails(id)
     }
+
+    suspend fun getMoveDetails(id: Int): MoveDetails {
+        return Network().getService().getMoveDetails(id)
+    }
 }

@@ -20,4 +20,7 @@ interface PokemonsService {
 
     @GET("type/{id}")
     suspend fun getTypeDetails(@Path("id") id: Int): TypeDetails
+
+    @GET("move/{id}")
+    suspend fun getMoveDetails(@Path("id") id: Int): MoveDetails
 }

@@ -76,10 +76,6 @@
     <string name="lv">"Lv "</string>
     <string name="edit_error_msg">You can\'t edit empty list!</string>
     <string name="title_activity_type">activity_type</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dmg_text_title">2x</string>
     <string name="pokemons_title">POKEMONS</string>
     <string name="moves">MOVES</string>
@@ -90,4 +86,16 @@
     <string name="defensive">Defensive</string>
     <string name="half_text">1/2x</string>
     <string name="no_dmg_text">0x</string>
+    <string name="i">I</string>
+    <string name="bloom_doom">Bloom Doom</string>
+    <string name="physical">Physical</string>
+    <string name="power_value">40</string>
+    <string name="_25_max_40">25 (max 40)</string>
+    <string name="_25_n_max_40">25\n (max 40)</string>
+    <string name="move">MOVE</string>
+    <string name="sort_icon">sort_icon</string>
+    <string name="gen">GEN</string>
+    <string name="category">CATEGORY</string>
+    <string name="pp">PP</string>
+    <string name="none">None</string>
 </resources>

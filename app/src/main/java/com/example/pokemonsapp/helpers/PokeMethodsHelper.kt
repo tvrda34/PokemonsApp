@@ -30,10 +30,10 @@ fun capitalization(name: String): String {
 }
 
 fun loadStar(fav: Boolean): Int {
-    if (fav) {
-        return R.drawable.ic_star_1
+    return if (fav) {
+        R.drawable.ic_star_1
     } else {
-        return R.drawable.ic_star_0
+        R.drawable.ic_star_0
     }
 }
 
@@ -66,4 +66,38 @@ fun typeColorPicker(context: Context, type: String): Int {
 fun idExtractor(url: String): Int {
     val urld = url.filter { it.isDigit() }
     return urld.substring(1, urld.length).toInt()
+}
+
+fun generationColorPicker(context: Context, name: String): Int {
+    return when (name) {
+        "generation-i" -> context.getColor(R.color.gen_one)
+        "generation-ii" -> context.getColor(R.color.gen_two)
+        "generation-iii" -> context.getColor(R.color.gen_thr)
+        "generation-iv" -> context.getColor(R.color.gen_fou)
+        "generation-v" -> context.getColor(R.color.gen_fiv)
+        "generation-vi" -> context.getColor(R.color.gen_six)
+        "generation-vii" -> context.getColor(R.color.gen_sev)
+        else -> context.getColor(R.color.gen_eig)
+    }
+}
+
+fun moveCategoryColorPicker(context: Context, name: String): Int {
+    return when (name) {
+        "physical" -> context.getColor(R.color.phy_move)
+        "special" -> context.getColor(R.color.spec_move)
+        else -> context.getColor(R.color.status_move)
+    }
+}
+
+fun generationNumberHelper(name: String): String {
+    return when (name) {
+        "generation-i" -> "I"
+        "generation-ii" -> "II"
+        "generation-iii" -> "III"
+        "generation-iv" -> "IV"
+        "generation-v" -> "V"
+        "generation-vi" -> "VI"
+        "generation-vii" -> "VII"
+        else -> "VIII"
+    }
 }

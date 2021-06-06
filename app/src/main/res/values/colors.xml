@@ -52,4 +52,15 @@
     <color name="bckg_succes">#1212ca5d</color>
     <color name="bckg_error">#12ff4848</color>
     <color name="bckg_gray">#12798fa4</color>
+    <color name="gen_one">#482db407</color>
+    <color name="gen_two">#48a7b820</color>
+    <color name="gen_thr">#4867a190</color>
+    <color name="gen_fou">#48705998</color>
+    <color name="gen_fiv">#4841b1ff</color>
+    <color name="gen_six">#48c03128</color>
+    <color name="gen_sev">#48ff6f21</color>
+    <color name="gen_eig">#48d933d3</color>
+    <color name="phy_move">#48ff4848</color>
+    <color name="spec_move">#48798fa4</color>
+    <color name="status_move">#331c1f22</color>
 </resources>
