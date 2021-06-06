@@ -6,5 +6,5 @@ Problems:
 - ne prikazuje se SearchView hint prije nego na klik
 - problemi s dizajnom nije isti svugdje (npr. Spinner umjesto TextInputLayouta)
 - reorder -> ne spremaju se dobro pozicije u bazu
-- pagging -> db + netwrok, ali niej dobra bas izvedba 
+- pagging -> db + netwrok, ali nije dobra bas izvedba 
 - search -> neoptimiziran i loš
