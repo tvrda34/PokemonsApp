@@ -16,7 +16,7 @@ import com.example.pokemonsapp.helpers.*
 import com.example.pokemonsapp.model.PokemonAllData
 import com.example.pokemonsapp.ui.adapters.AbilitiesRecyclerAdapter
 import com.example.pokemonsapp.ui.adapters.EvolutionRecyclerAdapter
-import com.example.pokemonsapp.ui.type.TypeActivity
+import com.example.pokemonsapp.ui.type.PokemonTypeActivity
 import com.example.pokemonsapp.viewmodel.SharedViewModel
 import kotlin.math.roundToInt
 
@@ -140,7 +140,7 @@ class PokemonItem : AppCompatActivity() {
         //on click type activity
         binding.scrollCont.baseInfo.label1.setOnClickListener {
             this.startActivity(
-                Intent(this, TypeActivity::class.java).putExtra(
+                Intent(this, PokemonTypeActivity::class.java).putExtra(
                     "extra",
                     pokemon.pokemonDetails.types[0].type
                 )
@@ -161,7 +161,7 @@ class PokemonItem : AppCompatActivity() {
             //label2 click
             binding.scrollCont.baseInfo.label2.setOnClickListener {
                 this.startActivity(
-                    Intent(this, TypeActivity::class.java).putExtra(
+                    Intent(this, PokemonTypeActivity::class.java).putExtra(
                         "extra",
                         pokemon.pokemonDetails.types[1].type
                     )

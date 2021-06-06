@@ -19,7 +19,7 @@ import com.example.pokemonsapp.ui.type.ui.adapters_viewmodel.PageViewModel
 import com.example.pokemonsapp.ui.type.ui.adapters_viewmodel.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
-class TypeActivity : AppCompatActivity() {
+class PokemonTypeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTypeBinding
     private val viewModel: PageViewModel by viewModels()

@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.pokemonsapp.databinding.FragmentAllPokemonsBinding
-import com.example.pokemonsapp.ui.adapters.PokemonsGridAdapter
 import com.example.pokemonsapp.ui.type.ui.adapters_viewmodel.GridSpacingItemDecoration
 import com.example.pokemonsapp.ui.type.ui.adapters_viewmodel.PageViewModel
+import com.example.pokemonsapp.ui.type.ui.adapters_viewmodel.PokemonsGridAdapter
 
 
 const val COLUMN_NUM = 3

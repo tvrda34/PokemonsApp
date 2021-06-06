@@ -1,4 +1,4 @@
-package com.example.pokemonsapp.ui.adapters
+package com.example.pokemonsapp.ui.type.ui.adapters_viewmodel
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -30,6 +30,7 @@ class PokemonsGridAdapter(val context: Context, val pokemons: List<PokemonType>)
     override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
         val pokemonUi = pokemons[position]
         val helper = PokeMethodsHelper(idExtractor(pokemonUi.pokemon.url))
+        holder.binding.pokemonImage.load(R.drawable.ic_baseline_image_24)
 
         holder.binding.typePokemonCard.background =
             context.getDrawable(R.drawable.recycler_item_bckg)

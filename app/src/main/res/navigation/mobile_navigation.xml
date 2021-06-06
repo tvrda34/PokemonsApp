@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_favourites"
-        android:name="com.example.pokemonsapp.ui.favourites.FavouritesFragment"
+        android:name="com.example.pokemonsapp.ui.favourites.FavoritePokemonsFragment"
         android:label="@string/title_favourites"
         tools:layout="@layout/fragment_favourites" />
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.pokemonsapp.ui.search.SearchFragment"
+        android:name="com.example.pokemonsapp.ui.search.PokemonSearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" />
 

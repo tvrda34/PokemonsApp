@@ -20,7 +20,7 @@ import com.example.pokemonsapp.viewmodel.SharedViewModel
 import java.util.*
 import kotlin.collections.ArrayList
 
-class FavouritesFragment : Fragment() {
+class FavoritePokemonsFragment : Fragment() {
 
     private var _binding: FragmentFavouritesBinding? = null
     private val viewModel by activityViewModels<SharedViewModel>()

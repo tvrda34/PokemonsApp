@@ -19,7 +19,7 @@ import com.example.pokemonsapp.viewmodel.SharedViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class SearchFragment : Fragment() {
+class PokemonSearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
     private val viewModel by activityViewModels<SharedViewModel>()
