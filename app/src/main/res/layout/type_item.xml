@@ -3,6 +3,7 @@
     android:id="@+id/type_label_cont"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView

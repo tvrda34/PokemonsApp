@@ -1,8 +1,10 @@
 package com.example.pokemonsapp.ui.type
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.ColorUtils
 import androidx.viewpager.widget.ViewPager
 import com.example.pokemonsapp.databinding.ActivityTypeBinding
 import com.example.pokemonsapp.helpers.capitalization
@@ -20,6 +22,7 @@ class TypeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTypeBinding
     private val viewModel: PageViewModel by viewModels()
+    private lateinit var sectionsPagerAdapter: SectionsPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +30,7 @@ class TypeActivity : AppCompatActivity() {
         binding = ActivityTypeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
+        sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         setUpFragment(sectionsPagerAdapter)
 
         val viewPager: ViewPager = binding.viewPager
@@ -49,16 +52,24 @@ class TypeActivity : AppCompatActivity() {
             this.finish()
         }
 
+        val window = this.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        //window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        val color = ColorUtils.setAlphaComponent(typeColorPicker(this, type = type.name), 216)
+        window.statusBarColor = color
+
     }
 
     private fun setUpFragment(adapter: SectionsPagerAdapter) {
-        adapter.addFragment(OverviewFragment())
-        adapter.addFragment(MovesFragment())
-        adapter.addFragment(AllPokemonsFragment())
+        adapter.addFragment(OverviewFragment(), "DAMAGE OVERVIEW")
+        adapter.addFragment(MovesFragment(), "MOVES")
+        adapter.addFragment(AllPokemonsFragment(), "POKEMONS")
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
+        sectionsPagerAdapter.clearLists()
         viewModelStore.clear()
         this.finish()
     }

@@ -31,4 +31,17 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp" />
 
+    <TextView
+        android:id="@+id/none_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:textAppearance="@style/Headline3ColdGrayLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/x_text"
+        android:visibility="invisible" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
