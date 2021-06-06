@@ -49,66 +49,74 @@ class OverviewFragment : Fragment() {
         binding.defensiveBox.noDmg.recycler.setHasFixedSize(false)
 
         viewModel.pokemons.observe(viewLifecycleOwner, {
-            if (it.damage_relations.double_damage_to.isEmpty()) {
-                binding.offensiveBox.doubleX2.noneMsg.visibility = View.VISIBLE
-                binding.offensiveBox.doubleX2.recycler.visibility = View.INVISIBLE
-                binding.offensiveBox.doubleX2.noneMsg.setTextColor(requireContext().getColor(R.color.success))
-            } else {
-                binding.offensiveBox.doubleX2.noneMsg.visibility = View.INVISIBLE
-                binding.offensiveBox.doubleX2.recycler.adapter =
-                    TypeLabelAdapter(requireContext(), it.damage_relations.double_damage_to)
-            }
+            if (it != null) {
+                binding.loader.visibility = View.GONE
+                binding.defensiveBox.overviewCont.visibility = View.VISIBLE
+                binding.offensiveBox.overviewCont.visibility = View.VISIBLE
 
-            if (it.damage_relations.half_damage_to.isEmpty()) {
-                binding.offensiveBox.half.noneMsg.visibility = View.VISIBLE
-                binding.offensiveBox.half.recycler.visibility = View.INVISIBLE
-                binding.offensiveBox.half.noneMsg.setTextColor(requireContext().getColor(R.color.error))
-            } else {
-                binding.offensiveBox.half.noneMsg.visibility = View.INVISIBLE
-                binding.offensiveBox.half.recycler.adapter =
-                    TypeLabelAdapter(requireContext(), it.damage_relations.half_damage_to)
-            }
+                if (it.damage_relations.double_damage_to.isEmpty()) {
+                    binding.offensiveBox.doubleX2.noneMsg.visibility = View.VISIBLE
+                    binding.offensiveBox.doubleX2.recycler.visibility = View.INVISIBLE
+                    binding.offensiveBox.doubleX2.noneMsg.setTextColor(requireContext().getColor(R.color.success))
+                } else {
+                    binding.offensiveBox.doubleX2.noneMsg.visibility = View.INVISIBLE
+                    binding.offensiveBox.doubleX2.recycler.adapter =
+                        TypeLabelAdapter(requireContext(), it.damage_relations.double_damage_to)
+                }
 
-            if (it.damage_relations.no_damage_to.isEmpty()) {
-                binding.offensiveBox.noDmg.noneMsg.visibility = View.VISIBLE
-                binding.offensiveBox.noDmg.recycler.visibility = View.INVISIBLE
-                binding.offensiveBox.noDmg.noneMsg.setTextColor(requireContext().getColor(R.color.cold_gray))
-            } else {
-                binding.offensiveBox.noDmg.noneMsg.visibility = View.INVISIBLE
-                binding.offensiveBox.noDmg.recycler.adapter =
-                    TypeLabelAdapter(requireContext(), it.damage_relations.no_damage_to)
-            }
+                if (it.damage_relations.half_damage_to.isEmpty()) {
+                    binding.offensiveBox.half.noneMsg.visibility = View.VISIBLE
+                    binding.offensiveBox.half.recycler.visibility = View.INVISIBLE
+                    binding.offensiveBox.half.noneMsg.setTextColor(requireContext().getColor(R.color.error))
+                } else {
+                    binding.offensiveBox.half.noneMsg.visibility = View.INVISIBLE
+                    binding.offensiveBox.half.recycler.adapter =
+                        TypeLabelAdapter(requireContext(), it.damage_relations.half_damage_to)
+                }
 
-            if (it.damage_relations.half_damage_from.isEmpty()) {
-                binding.defensiveBox.doubleX2.noneMsg.visibility = View.VISIBLE
-                binding.defensiveBox.doubleX2.recycler.visibility = View.INVISIBLE
-                binding.defensiveBox.doubleX2.noneMsg.setTextColor(requireContext().getColor(R.color.error))
-            } else {
-                binding.defensiveBox.doubleX2.noneMsg.visibility = View.INVISIBLE
-                binding.defensiveBox.doubleX2.recycler.adapter =
-                    TypeLabelAdapter(requireContext(), it.damage_relations.half_damage_from)
-            }
+                if (it.damage_relations.no_damage_to.isEmpty()) {
+                    binding.offensiveBox.noDmg.noneMsg.visibility = View.VISIBLE
+                    binding.offensiveBox.noDmg.recycler.visibility = View.INVISIBLE
+                    binding.offensiveBox.noDmg.noneMsg.setTextColor(requireContext().getColor(R.color.cold_gray))
+                } else {
+                    binding.offensiveBox.noDmg.noneMsg.visibility = View.INVISIBLE
+                    binding.offensiveBox.noDmg.recycler.adapter =
+                        TypeLabelAdapter(requireContext(), it.damage_relations.no_damage_to)
+                }
 
-            if (it.damage_relations.double_damage_from.isEmpty()) {
-                binding.defensiveBox.half.noneMsg.visibility = View.VISIBLE
-                binding.defensiveBox.half.recycler.visibility = View.INVISIBLE
-                binding.defensiveBox.half.noneMsg.setTextColor(requireContext().getColor(R.color.error))
-            } else {
-                binding.defensiveBox.half.noneMsg.visibility = View.INVISIBLE
-                binding.defensiveBox.half.recycler.adapter =
-                    TypeLabelAdapter(requireContext(), it.damage_relations.double_damage_from)
-            }
+                if (it.damage_relations.half_damage_from.isEmpty()) {
+                    binding.defensiveBox.doubleX2.noneMsg.visibility = View.VISIBLE
+                    binding.defensiveBox.doubleX2.recycler.visibility = View.INVISIBLE
+                    binding.defensiveBox.doubleX2.noneMsg.setTextColor(requireContext().getColor(R.color.error))
+                } else {
+                    binding.defensiveBox.doubleX2.noneMsg.visibility = View.INVISIBLE
+                    binding.defensiveBox.doubleX2.recycler.adapter =
+                        TypeLabelAdapter(requireContext(), it.damage_relations.half_damage_from)
+                }
 
-            if (it.damage_relations.no_damage_from.isEmpty()) {
-                binding.defensiveBox.noDmg.noneMsg.visibility = View.VISIBLE
-                binding.defensiveBox.noDmg.recycler.visibility = View.INVISIBLE
-                binding.defensiveBox.noDmg.noneMsg.setTextColor(requireContext().getColor(R.color.cold_gray))
-            } else {
-                binding.defensiveBox.noDmg.noneMsg.visibility = View.INVISIBLE
-                binding.defensiveBox.noDmg.recycler.adapter =
-                    TypeLabelAdapter(requireContext(), it.damage_relations.no_damage_from)
-            }
+                if (it.damage_relations.double_damage_from.isEmpty()) {
+                    binding.defensiveBox.half.noneMsg.visibility = View.VISIBLE
+                    binding.defensiveBox.half.recycler.visibility = View.INVISIBLE
+                    binding.defensiveBox.half.noneMsg.setTextColor(requireContext().getColor(R.color.error))
+                } else {
+                    binding.defensiveBox.half.noneMsg.visibility = View.INVISIBLE
+                    binding.defensiveBox.half.recycler.adapter =
+                        TypeLabelAdapter(requireContext(), it.damage_relations.double_damage_from)
+                }
 
+                if (it.damage_relations.no_damage_from.isEmpty()) {
+                    binding.defensiveBox.noDmg.noneMsg.visibility = View.VISIBLE
+                    binding.defensiveBox.noDmg.recycler.visibility = View.INVISIBLE
+                    binding.defensiveBox.noDmg.noneMsg.setTextColor(requireContext().getColor(R.color.cold_gray))
+                } else {
+                    binding.defensiveBox.noDmg.noneMsg.visibility = View.INVISIBLE
+                    binding.defensiveBox.noDmg.recycler.adapter =
+                        TypeLabelAdapter(requireContext(), it.damage_relations.no_damage_from)
+                }
+            } else {
+                binding.defensiveBox.overviewCont.visibility = View.INVISIBLE
+                binding.offensiveBox.overviewCont.visibility = View.INVISIBLE
+            }
         })
 
         return binding.root

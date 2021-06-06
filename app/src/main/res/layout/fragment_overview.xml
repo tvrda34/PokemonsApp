@@ -17,6 +17,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/loading"
+        android:textAppearance="@style/Headline2DarkCenter"
+        android:textColor="@color/cold_gray"
+        android:textAlignment="center" />
+
     <include
         layout="@layout/container_all_overview"
         android:id="@+id/defensive_box"
