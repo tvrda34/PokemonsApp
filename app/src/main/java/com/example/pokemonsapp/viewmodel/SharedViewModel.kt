@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 
 class SharedViewModel : ViewModel() {
 
-    val searchQuery = MutableLiveData("")
+    private val searchQuery = MutableLiveData("")
 
     //only network paging
     val flow = Pager(
@@ -202,13 +202,30 @@ class SharedViewModel : ViewModel() {
         }
     }
 
+    fun reorderAdd(context: Context, pokemon: PokemonAllData, i: Int) {
+        viewModelScope.launch {
+            val db = PokemonsDatabase.getDatabase(context)
+            db?.pokemonsDao()?.addNewFavPokemon(
+                PokemonFav(
+                    pokemon.pokemonBase,
+                    pokemon.pokemonDetails,
+                    pokemon.key,
+                    i,
+                    pokemon.specie
+                )
+            )
+            updateDataFavouriteValue(context, pokemon)
+            getFavourites(context)
+        }
+    }
+
 
     fun reorderPositionUpdate(context: Context, list: ArrayList<PokemonFav>) {
         viewModelScope.launch {
             removeAllFavs(context)
             for (i in list.indices) {
                 val poke = list[i]
-                addFavPokemon(
+                reorderAdd(
                     context,
                     PokemonAllData(
                         poke.pokemonBase,
@@ -216,7 +233,7 @@ class SharedViewModel : ViewModel() {
                         true,
                         poke.key,
                         poke.pokeSpecie
-                    )
+                    ), i
                 )
             }
         }

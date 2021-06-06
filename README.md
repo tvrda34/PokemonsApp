@@ -3,8 +3,14 @@ Pokedex app for Android. Still in process of creation.
 Final task on SofaScore android academy.
 
 Problems:
-- ne prikazuje se SearchView hint prije nego na klik
-- problemi s dizajnom nije isti svugdje (npr. Spinner umjesto TextInputLayouta)
-- reorder -> ne spremaju se dobro pozicije u bazu nakon reordera
-- pagging -> db + netwrok, ali nije dobra bas izvedba 
+- problemi s dizajnom:
+    - Spinner umjesto TextInputLayouta
+    - PokemonActivity title nije dobro pozicioniran
+    - SearchView hint se ne prikazuje
+    - moguće da nije sve u piksel isto (točnije sigurno je tako)
+
+- pagging -> db + network, ali nije dobra baš izvedba (okhttp stalno javlja povlačenja podataka)
 - search -> neoptimiziran i loš
+- reorder radi, ali nije najbolje ponašanje baš uvijek
+
+To je valjda to sve drugo je kolko tolko pristojno napravljeno
