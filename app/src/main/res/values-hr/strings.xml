@@ -98,4 +98,5 @@
     <string name="category">KAT</string>
     <string name="pp">PP</string>
     <string name="none">Nema</string>
+    <string name="loading">Učitavanje…</string>
 </resources>
